@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #CCDBFD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gd.controller.LoginController">
+   <children>
+      <FlowPane alignment="CENTER_RIGHT" hgap="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#login" prefHeight="40.0" text="Valider">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/check%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="Quitter">
+               <FlowPane.margin>
+                  <Insets right="12.0" />
+               </FlowPane.margin>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </FlowPane>
+      <GridPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #ABC4FF;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text=" Nom d'utilisateur " GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/trader.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text=" Mot de passe " GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/key.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Connexion au ">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="115.0" text="project" textFill="#4f000b" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Book Antiqua" size="37.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label text="GDI" textFill="#eaeaea" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Bold Italic" size="40.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="120.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="UserIDTextbox" prefHeight="43.0" prefWidth="299.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="PasswordTextbox" prefHeight="43.0" prefWidth="299.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="50.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>

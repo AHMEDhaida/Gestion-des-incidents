@@ -1,0 +1,16 @@
+
+
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: #CCDBFD;
+}
+
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: #FFFFFC;
+}
+
+
+
+.table-row-cell .idMs {
+    -fx-background-color: #34E55C;
+}

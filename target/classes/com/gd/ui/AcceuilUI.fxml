@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gd.controller.AcceuilUIController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="453.0" layoutX="126.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/Untitled.png" />
+               </image></ImageView>
+            <Label layoutX="189.0" layoutY="255.0" prefHeight="40.0" prefWidth="341.0" text="Systeme de Gestion des Incidents" textFill="#4f000b">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="536.0" prefHeight="18.0" prefWidth="671.0" progress="0.0" />
+            <Label fx:id="lblLoading" layoutX="22.0" layoutY="503.0" text="Loading ..." />
+            <Label fx:id="lblLoadingA" layoutX="644.0" layoutY="503.0" text="0%" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

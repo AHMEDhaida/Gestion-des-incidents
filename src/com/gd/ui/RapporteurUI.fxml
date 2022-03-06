@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gd.controller.RapporteurUIController">
+   <left>
+      <SplitPane orientation="VERTICAL" prefWidth="250.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <HBox spacing="10.0" style="-fx-background-color: #CCDBFD; -fx-border-color: #ABC4FF; -fx-border-style: solid inside; -fx-border-width: 1;" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets bottom="10.0" left="7.0" right="7.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="15.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/comment.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Commentaire" textFill="#1b191a">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="MsTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@resources/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+                    <columns>
+                      <TableColumn fx:id="idMs" prefWidth="75.0" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </left>
+   <top>
+      <SplitPane prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="115.0" text="project" textFill="#4f000b" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Book Antiqua" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="12.0" text="GDI" textFill="#eaeaea">
+                     <font>
+                        <Font name="Arial Bold Italic" size="40.0" />
+                     </font>
+                  </Label>
+                  <FlowPane alignment="CENTER_RIGHT" hgap="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextField fx:id="rechercherField" promptText="Recherche..." />
+                        <MenuButton fx:id="MenuButtonField" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" stylesheets="@resources/Style.css" text="Mon espace">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Modifier Votre Profile">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#ChangePassword" text="Modifier Voter Password">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/password.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                        </MenuButton>
+                        <Button mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/power-button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </FlowPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFC;" stylesheets="@resources/Style.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab style="-fx-background-color: #CCDBFD; -fx-border-color: #ABC4FF; -fx-border-width: 1; -fx-font-size: 12px; -fx-font-family: Arial; -fx-text-base-color: #3A0CA3;" text="          Bugs        ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox spacing="10.0" style="-fx-background-color: #CCDBFD; -fx-border-color: #ABC4FF; -fx-border-width: 1; -fx-border-style: solid inside;" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleNouveauIncident" style="-fx-background-color: #CCDBFD;" text="Creer  ">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/bug.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleModifierIncident" style="-fx-background-color: #CCDBFD;" text="Modifier">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/bug.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleCommentaire" style="-fx-background-color: #CCDBFD;" text="Commenter">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/comment.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="7.0" right="7.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="IncidentTable" style="-fx-selection-bar: #CCDBFD; -fx-selection-bar: salmon; fx-border-color: #ABC4FF; -fx-border-width: 1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="51.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="IdColumn" minWidth="-Infinity" prefWidth="105.0" text="#" />
+                              <TableColumn fx:id="EtatColumn" prefWidth="82.0" text="Etat" />
+                              <TableColumn fx:id="DescriptionColumn" prefWidth="132.0" text="Description" />
+                              <TableColumn fx:id="DateColumn" prefWidth="21.0" text="Date d’échéance" />
+                              <TableColumn fx:id="AssigneColumn" prefWidth="109.0" text="Assigné a" />
+                              <TableColumn fx:id="AppColumn" prefWidth="109.0" text="Sujet" />
+                              <TableColumn fx:id="GraviteColumn" prefWidth="109.0" text="Priorité" />
+                              <TableColumn fx:id="mise_ajourColumn" prefWidth="109.0" text="Deriére mise ajour" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

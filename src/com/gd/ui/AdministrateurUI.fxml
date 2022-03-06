@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gd.controller.AdminUIController">
+   <center>
+      <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox spacing="10.0" style="-fx-background-color: #CCDBFD; -fx-border-color: #ABC4FF; -fx-border-width: 1; -fx-border-style: solid inside;" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNouveauUser" style="-fx-background-color: #CCDBFD;" text="Nouvel Utilisateur">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/man.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleModifierUser" style="-fx-background-color: #CCDBFD;" text="Modifier l'Utilisateur">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleSupprimerUser" style="-fx-background-color: #CCDBFD;" text="Supprimer l'Utilisateur">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/userdelete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="7.0" right="7.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <TableView fx:id="userTable" cacheShape="false" scaleShape="false" style="-fx-selection-bar: #CCDBFD; -fx-selection-bar: salmon; fx-border-color: #ABC4FF; -fx-border-width: 1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                    <columns>
+                      <TableColumn fx:id="loginColumn" minWidth="-Infinity" prefWidth="105.0" text="Login" />
+                      <TableColumn fx:id="prenomColumn" prefWidth="82.0" text="Prénom" />
+                        <TableColumn fx:id="nomColumn" prefWidth="95.0" text="Nom" />
+                        <TableColumn fx:id="emailColumn" prefWidth="146.0" text="Email" />
+                        <TableColumn fx:id="roleColumn" prefWidth="109.0" text="Role" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <left>
+      <SplitPane orientation="VERTICAL" prefWidth="250.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <HBox spacing="10.0" style="-fx-background-color: #CCDBFD; -fx-border-color: #ABC4FF; -fx-border-style: solid inside; -fx-border-width: 1;" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets bottom="10.0" left="7.0" right="7.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <TableView prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </left>
+   <top>
+      <SplitPane prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="115.0" text="project" textFill="#4f000b" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Book Antiqua" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="12.0" text="GDI" textFill="#eaeaea">
+                     <font>
+                        <Font name="Arial Bold Italic" size="40.0" />
+                     </font>
+                  </Label>
+                  <FlowPane alignment="CENTER_RIGHT" hgap="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextField fx:id="rechercherField" promptText="Recherche..." />
+                        <MenuButton fx:id="MenuButtonField" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" stylesheets="@resources/Style.css" text="Mon espace">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Modifier Votre Profile">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#ChangePassword" text="Modifier Voter Password">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/password.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                        </MenuButton>
+                        <Button mnemonicParsing="false" style="-fx-background-color: #FFFFFF;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/power-button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </FlowPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+</BorderPane>
